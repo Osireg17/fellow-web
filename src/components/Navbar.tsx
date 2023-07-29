@@ -33,13 +33,13 @@ const Navbar = () => {
                 </li> */}
                 </ul>
 
-                <div className='block sm:hidden z-10'>
-                    {isOpen ? <VscClose onClick={toggle} className='text-4xl cursor-pointer' /> : <VscMenu onClick={toggle} className='text-4xl cursor-pointer' />}
+                <div className='block sm:hidden z-30'>
+                    {isOpen ? <VscClose onClick={toggle} className='text-4xl cursor-pointer z-20' /> : <VscMenu onClick={toggle} className='text-4xl cursor-pointer z-20' />}
                 </div>
 
                 <div className={
-                    isOpen ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' :
-                        'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
+                    isOpen ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black z-20 text-center ease-in duration-300' :
+                        'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black z-20 text-center ease-in duration-300'
                 }>
                     <Link href='/' className='absolute top-0 left-0 right-0'>
                         <Image src={Logo} alt='logo' width={100} height={100} />
