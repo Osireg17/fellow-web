@@ -13,7 +13,7 @@ const Main = ({ text }: MainProps) => {
   };
   return (
     <>
-      <div className="relative">
+      <div className="relative z-0">
         <div className="absolute inset-[0] bg-black/60 z-[-1]" />
         <h1 className="z-[] text-5xl font-bold text-center py-10 text-white">{text}</h1>
         <div className="z-[3] max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

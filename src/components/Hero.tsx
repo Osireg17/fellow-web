@@ -21,7 +21,7 @@ const Hero = (
     }
     return (
         <>
-            <div className='relative flex items-center justify-center min-h-screen'>
+            <div className='relative flex items-center justify-center min-h-screen z-[-2]'>
                 <div className='absolute inset-0 bg-black/60 z-[2]' />
                 <div className='p-5 text-white z-[2] mb-5'>
                     <h1 className='text-8xl font-bold'>

@@ -58,7 +58,7 @@ const SignUp = () => {
         <>
             {formSubmitted ? (
                 <>
-                    <div className='relative'>
+                    <div className='relative z-[-2]'>
                         <div className="absolute inset-[0] bg-black/60 z-[-1]" />
                         <div className="flex flex-col items-center justify-center h-screen">
                             <div className="bg-white shadow-md rounded-lg p-8 sm:mt-24 w-3/4">
@@ -78,7 +78,7 @@ const SignUp = () => {
                 </>
 
             ) : (
-                <div className='relative'>
+                <div className='relative z-[-2]'>
                     <div className="absolute inset-[0] bg-black/60 z-[-1]" />
                     <div className="flex flex-col items-center justify-center h-screen">
                         <div className="bg-white shadow-md rounded-lg p-8 sm:mt-24 w-3/4">
