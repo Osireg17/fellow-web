@@ -8,7 +8,6 @@ import Logos from './Logos/Logo-4.png'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
-
     const toggle = () => {
         setIsOpen(!isOpen)
     };
@@ -25,7 +24,7 @@ const Navbar = () => {
                         <Link href='/'>Home</Link>
                     </li>
                     <li>
-                        <Link href='/signUp'>
+                        <Link href='/_signUp'>
                             <button className='bg-white text-black mt-2 p-2 rounded-md hover:bg-gray-200'>Sign Up</button>
                         </Link>
                     </li>
@@ -50,7 +49,7 @@ const Navbar = () => {
                             <Link href='/'>Home</Link>
                         </li>
                         <li className='p-4 text-4xl hover:text-gray-500'>
-                            <Link href='/signUp'>
+                            <Link href='/_signUp'>
                                 <button className='bg-white text-black p-2 rounded-md hover:bg-gray-200'>Sign Up</button>
                             </Link>
                         </li>
