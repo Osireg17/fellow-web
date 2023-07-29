@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div className='bg-[#00000090] relative ease-in duration-300'>
-        <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
+        <div className='max-w-[1000px] m-auto flex justify-between items-center p-4 text-white'>
             <Link href='/'>
                 <Image src={Logos} alt='logo' width={100} height={100} />
             </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
                     <Link href='/'>Home</Link>
                 </li>
                 <li>
-                    <Link href='#'>
+                    <Link href='/SignUp'>
                         <button className='bg-white text-black mt-2 p-2 rounded-md hover:bg-gray-200'>Sign Up</button>
                     </Link>
                 </li>

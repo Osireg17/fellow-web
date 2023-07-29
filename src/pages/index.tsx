@@ -3,10 +3,15 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Hero from '../components/Hero'
 import Main from '../components/Main'
+import {initFirebase} from '../config/firebase'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const app = initFirebase()
+  console.log(app)
+
   return (
     <>
       <Head>

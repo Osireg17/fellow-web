@@ -30,7 +30,6 @@ const Hero = (
                                 strings: [heading],
                                 autoStart: true,
                                 loop: true,
-                                delay: 2000,
                             }}
                         />
                     </h1>
