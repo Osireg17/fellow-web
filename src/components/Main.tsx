@@ -1,12 +1,5 @@
 import React, { useState } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import Image from 'next/image'
-import { SlSocialLinkedin } from 'react-icons/sl'
-import Osi from '../pages/Photos/Osi-Headshot.jpeg'
-import Precious from '../pages/Photos/Precious-Headshot.jpeg'
-import Ayo from '../pages/Photos/Ayo-Headshot.jpeg'
-import Timi from '../pages/Photos/Timi-Headshot.jpeg'
-
 interface MainProps {
   text: string
 }
