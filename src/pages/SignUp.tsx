@@ -10,8 +10,35 @@ const SignUp = () => {
     const [NameError, setNameError] = useState('')
     const [formSubmitted, setFormSubmitted] = useState(false);
 
+    const validateForm = () => {
+        let isValid = true;
+
+        // Reset previous error messages
+        setNameError('');
+        setEmailError('');
+
+        // Validate name field
+        if (name.trim() === '') {
+            setNameError('Name is required');
+            isValid = false;
+        }
+
+        // Validate email field
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            setEmailError('Invalid email format');
+            isValid = false;
+        }
+
+        return isValid;
+    };
+
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
+
         try {
             await addDoc(collection(database, 'early-access'), {
                 name,
@@ -31,25 +58,25 @@ const SignUp = () => {
         <>
             {formSubmitted ? (
                 <>
-                <div className='relative'>
-                    <div className="absolute inset-[0] bg-black/60 z-[-1]" />
-                    <div className="flex flex-col items-center justify-center h-screen">
-                        <div className="bg-white shadow-md rounded-lg p-8 sm:mt-24 w-3/4">
-                            <h1 className="font-bold text-4xl mb-3">Welcome to Fellow</h1>
-                            <p className="text-lg mb-3">
-                                {"We're excited that you're interested in Fellow."}
-                            </p>
-                            <p className="text-lg mb-3">
-                                {"We'll be in touch soon with more information."}
-                            </p>
-                            <p className="text-lg mb-3">
-                                - The Fellow Team
-                            </p>
+                    <div className='relative'>
+                        <div className="absolute inset-[0] bg-black/60 z-[-1]" />
+                        <div className="flex flex-col items-center justify-center h-screen">
+                            <div className="bg-white shadow-md rounded-lg p-8 sm:mt-24 w-3/4">
+                                <h1 className="font-bold text-4xl mb-3">Welcome to Fellow</h1>
+                                <p className="text-lg mb-3">
+                                    {"We're excited that you're interested in Fellow."}
+                                </p>
+                                <p className="text-lg mb-3">
+                                    {"We'll be in touch soon with more information."}
+                                </p>
+                                <p className="text-lg mb-3">
+                                    - The Fellow Team
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </>
-            
+                </>
+
             ) : (
                 <div className='relative'>
                     <div className="absolute inset-[0] bg-black/60 z-[-1]" />
@@ -100,8 +127,6 @@ const SignUp = () => {
             )}
         </>
     );
-
-
 }
 
 
